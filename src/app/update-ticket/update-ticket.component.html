@@ -1,0 +1,62 @@
+<p>update-ticket works!</p>
+
+
+
+
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">title</label>
+      <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="Enter title"
+      [(ngModel)]="ticket.title" name="title"
+      >
+    </div>
+
+    <div class="form-group">
+        <label for="description">description</label>
+        <input type="text" class="form-control" id="description" aria-describedby="description" placeholder="Enter description"
+        [(ngModel)]="ticket.description" name="description"
+        >
+      </div>
+
+  
+
+      <div class="form-group">
+        <label for="creationDate">creationDate</label>
+        <input type="date" class="form-control" id="creationDate" aria-describedby="creationDate" placeholder="Enter creationDate"
+        [(ngModel)]="ticket.creationDate" name="creationDate"
+        >
+      </div>
+      
+
+      <div class="form-group">
+        <label for="satisfaction">satisfaction</label>
+        <input type="text" class="form-control" id="satisfaction" aria-describedby="satisfaction" placeholder="Enter satisfaction"
+        [(ngModel)]="ticket.satisfaction" name="satisfaction"
+        >
+      </div>
+
+
+      <div class="form-group">
+        <label for="type">type</label>
+        <input type="text" class="form-control" id="type" aria-describedby="type" placeholder="Enter type"
+        [(ngModel)]="ticket.type" name="type"
+        >
+      </div>
+
+
+      <div class="form-group">
+        <label for="type">status</label>
+        <input type="text" class="form-control" id="status" aria-describedby="status" placeholder="Enter status"
+        [(ngModel)]="ticket.status" name="status"
+        >
+      </div>
+
+
+      <div class="form-group">
+        <label for="type">priority</label>
+        <input type="text" class="form-control" id="priority" aria-describedby="priority" placeholder="Enter priority"
+        [(ngModel)]="ticket.priority" name="priority"
+        >
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

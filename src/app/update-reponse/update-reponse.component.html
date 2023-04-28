@@ -1,0 +1,40 @@
+
+
+<form (ngSubmit)="onSubmit()">
+ 
+
+    <div class="form-group">
+        <label for="description">description</label>
+        <input type="text" class="form-control" id="description" aria-describedby="description" placeholder="Enter description"
+        [(ngModel)]="reponse.description" name="description"
+        >
+      </div>
+
+  
+
+      <div class="form-group">
+        <label for="dateCreation">dateCreation</label>
+        <input type="date" class="form-control" id="dateCreation" aria-describedby="dateCreation" placeholder="Enter dateCreation"
+        [(ngModel)]="reponse.dateCreation" name="dateCreation"
+        >
+      </div>
+      
+
+   
+
+
+      <div class="form-group">
+        <label for="type">sujet</label>
+        <input type="text" class="form-control" id="sujet" aria-describedby="sujet" placeholder="Enter sujet"
+        [(ngModel)]="reponse.sujet" name="sujet"
+        >
+      </div>
+
+
+    
+
+     
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

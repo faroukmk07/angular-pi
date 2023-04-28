@@ -1,0 +1,53 @@
+<p> Formulaire ticket : </p>
+
+
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="Enter title"
+      [(ngModel)]="ticket.title" name="title"
+      >
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" aria-describedby="description" placeholder="Enter description"
+        [(ngModel)]="ticket.description" name="description"
+        >
+      </div>
+
+  
+
+      <div class="form-group">
+        <label for="creationDate">Date Envoi</label>
+        <input type="date" class="form-control" id="creationDate" aria-describedby="creationDate" placeholder="Enter creationDate"
+        [(ngModel)]="ticket.creationDate" name="creationDate"
+        >
+      </div>
+      
+
+      <div class="form-group">
+        <label for="satisfaction">Satisfaction</label>
+        <input type="text" class="form-control" id="satisfaction" aria-describedby="satisfaction" placeholder="Enter satisfaction"
+        [(ngModel)]="ticket.satisfaction" name="satisfaction"
+        >
+      </div>
+
+
+      <div class="form-group">
+        <label for="type">Type</label>
+        <input type="text" class="form-control" id="type" aria-describedby="type" placeholder="Enter type"
+        [(ngModel)]="ticket.type" name="type"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="type"  > Priority </label>
+        <input type="text" class="form-control" id="priority" aria-describedby="priority" placeholder="Enter priority"
+        [(ngModel)]="ticket.priority" name="priority"
+        >
+      </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

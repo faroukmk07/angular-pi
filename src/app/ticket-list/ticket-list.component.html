@@ -1,0 +1,33 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col"> Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Priority</th>
+        <th scope="col">Type</th>
+        <th scope="col">Status</th>
+
+        <th scope="col">Action</th>
+        
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of tickets">
+        <td>{{t.id}}</td>
+        <td>{{t.title}}</td>
+        <td>{{t.description}}</td>
+        <td>{{t.priority}}</td>
+        <td>{{t.type}}</td>
+        <td>{{t.status}}</td>
+        <td>
+
+          <button (click)="updateTicket(t.id)"  class="btn btn-info"> update </button>
+          <button (click)="deleteTicket(t.id)" class="btn btn-danger"> delete </button>
+        </td>
+        
+      </tr>
+
+    </tbody>
+  </table>  
