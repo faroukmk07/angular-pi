@@ -20,7 +20,7 @@ import { Reponse } from '../entity/reponse';
     
     addReponse(reponse : Reponse):Observable<Object> {
       
-      return this.httpClient.post(`${this.API_URL}/add-ReponseTicket`, reponse);
+      return this.httpClient.post(`${this.API_URL}/add-ReponseTicket/${reponse.ticket_id}`, reponse);
     }
     
     editReponse(id:Number, reponseTicket : any):Observable<Object>{

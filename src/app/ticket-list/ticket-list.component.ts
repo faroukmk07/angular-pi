@@ -40,4 +40,8 @@ this.router.navigate(['update-ticket',id]);
       this.getTicket();
     })
       }
+
+      reponseticket  (id : Number){
+        this.router.navigate(['create-reponse',id]);
+          }
 }

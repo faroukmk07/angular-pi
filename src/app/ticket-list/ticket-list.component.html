@@ -5,28 +5,33 @@
         <th scope="col">Title</th>
         <th scope="col">Description</th>
         <th scope="col">Priority</th>
+        <th scope="col">Date</th>
         <th scope="col">Type</th>
-        <th scope="col">Status</th>
+        <th scope="col">Archive</th>
+        <th scope="col">status</th>
 
         <th scope="col">Action</th>
         
 
       </tr>
     </thead>
-    <tbody>
+    <tbody>     
+
       <tr *ngFor="let t of tickets">
-        <td>{{t.id}}</td>
+        <td >{{t.id}}</td>
         <td>{{t.title}}</td>
         <td>{{t.description}}</td>
         <td>{{t.priority}}</td>
+        <td>{{t.creationDate}}</td>
         <td>{{t.type}}</td>
+        <td>{{t.archiver}}</td>
         <td>{{t.status}}</td>
-        <td>
 
+        <td>
+          <button (click)="reponseticket(t.id)"  class="btn btn-info" *ngIf="t.status === 'PENDING'"> reponse ticket </button>
           <button (click)="updateTicket(t.id)"  class="btn btn-info"> update </button>
           <button (click)="deleteTicket(t.id)" class="btn btn-danger"> delete </button>
         </td>
-        
       </tr>
 
     </tbody>

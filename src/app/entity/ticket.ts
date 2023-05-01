@@ -7,6 +7,9 @@ export class Ticket {
     priority:String;
     satisfaction: Number;
     type: String;
-    status: String;
+    status:String;
     id_user: Number;
+    archiver: Boolean; 
+  
+
 }

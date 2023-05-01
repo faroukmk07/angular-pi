@@ -19,7 +19,7 @@ export class TicketService {
   
   addTicket(ticket : Ticket):Observable<Object> {
     
-    return this.httpClient.post(`${this.API_URL}/retrieve-all-tickets`, ticket);
+    return this.httpClient.post(`${this.API_URL}/retrieve-all-tickets/${1}/${1}`, ticket);
   }
   
   editTicket(id:Number,ticket : any):Observable<Object>{

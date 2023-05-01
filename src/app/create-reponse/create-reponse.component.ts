@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Reponse } from '../entity/reponse';
 import { ReponseService } from '../services/reponse.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-reponse',
@@ -10,14 +10,20 @@ import { Router } from '@angular/router';
 })
 export class CreateReponseComponent implements OnInit {
   reponse: Reponse = new Reponse();
+  id : Number;
   constructor(private reponseService:ReponseService,
-    private router:Router
+    private router:Router,private route:ActivatedRoute
     ) { }
 
   ngOnInit(): void {
   }
 
   saveTicket(){
+
+    this.id = this.route.snapshot.params['id'];
+
+    this.reponse.ticket_id=this.id;
+    
     this.reponseService.addReponse(this.reponse).subscribe( data => {
   console.log(data);
   this.gotoreponseList();

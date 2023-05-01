@@ -13,7 +13,7 @@ const routes: Routes = [
   {path:'reponses', component: ReponseListComponent},
   {path:'create-ticket',component: CreateTicketComponent},
   {path:'update-ticket/:id',component: UpdateTicketComponent},
-  {path:'create-reponse',component: CreateReponseComponent},
+  {path:'create-reponse/:id',component: CreateReponseComponent},
   {path:'update-reponse/:id',component: UpdateReponseComponent}
 
 

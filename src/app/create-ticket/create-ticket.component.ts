@@ -13,16 +13,25 @@ export class CreateTicketComponent implements OnInit {
   constructor(private ticketService:TicketService,
     private router:Router
     ) { }
-
+  
   ngOnInit(): void {
   }
 
 saveTicket(){
   this.ticket.id_user=1;
+  
   this.ticket.status="PENDING";
   this.ticketService.addTicket(this.ticket).subscribe( data => {
-console.log(data);
-this.gototicketList();
+    if (data===null)
+    {
+      // alert bad words
+    }
+    else
+    {
+      console.log(data);
+      this.gototicketList();
+    }
+
   },
   error => console.log(error));
 }
